@@ -1,25 +1,25 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <div>
+    <!-- <div>
       <p>
         If Element is successfully added to this project, you'll see an
         <code v-text="'<el-button>'"></code>
         below
       </p>
       <el-button>el-button</el-button>
-    </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    </div> -->
+    <PluginManager />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PluginManager from '@/components/PluginManager.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    PluginManager
   }
 }
 </script>
