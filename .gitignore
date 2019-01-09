@@ -65,3 +65,7 @@ typings/
 
 # Electron-builder output
 /dist_electron
+
+# Temp files
+.DS_Store
+
