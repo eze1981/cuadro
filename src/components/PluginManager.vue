@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <h1>Installed Plugins</h1>
+  <div class="manager">
+    <!-- <h1>Installed Plugins</h1>
     <ul>
       <li v-for="item in plugins">
         Plugin: {{item}} 
         <el-button v-on:click="loadPlugin(item)">load</el-button>
       </li>
-    </ul>
+    </ul> -->
 
     <PluginHost :pluginName="currentPluginName"></PluginHost>
   </div>
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     currentPluginName() {
-      return "cuadro-plugin-hello"
+      return "cuadro-plugin-clock"
     },
     plugins() {
       return this.$store.getters.installedPlugins
@@ -44,3 +44,16 @@ export default {
   }
 }
 </script>
+
+<style>
+.manager {
+  /* background: red; */
+  /* margin: 0 auto; */
+  /* width: 70%; */
+  /* height: 30px; */
+}
+
+/* .host {
+  margin: auto;
+} */
+</style>
