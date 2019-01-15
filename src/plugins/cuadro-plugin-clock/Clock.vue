@@ -2,8 +2,10 @@
   <div>
     <h1>{{date}}</h1>
     <analog-clock :minute="time.minutes" :tick="tick"></analog-clock>
-    <p>{{ weatherTemp }}</p>
-    <p>{{ weatherDescription }}</p>
+    <div class="weather">
+      <h2>{{ weatherTemp }}</h2>
+      <p>{{ weatherDescription }}</p>
+    </div>
   </div>
 </template>
 
@@ -42,17 +44,19 @@ export default {
     },
     async updateWeather() {
       let w = await weather.getCurrentWeather()
-      this.weatherTemp = `${w.temp.toFixed(1)} ℉`
+      this.weatherTemp = `${w.temp.toFixed(0)} ℉`
       this.weatherDescription = w.description
     }
   },
   mounted() {
     this.updateTime(new Date())
     this.updateWeather()
-  } 
+  }
 }
 </script>
 
 <style>
-
+.weather {
+  margin-top: 60px;
+}
 </style>
