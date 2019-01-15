@@ -55,6 +55,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$seconds-color: #f17e90;
+// $other-color: #edbec5;
+
 .analog-clock {
   // margin-top: 50px;
   // right: 50%;
@@ -75,7 +78,7 @@ export default {
     height: 2.5%;
     position: absolute;
     border-radius: 100%;
-    background-color: #edbec5;
+    background-color: $seconds-color;
     transform: translate3d(-50%, -50%, 0);
   }
   
@@ -144,7 +147,7 @@ export default {
       width: 1px;
       height: 45%;
       border-radius: 0;
-      background-color: #edbec5;
+      background-color: $seconds-color;
       transition: transform 100ms cubic-bezier(.6, .05, 0, 1.6);
 
       &::after {
